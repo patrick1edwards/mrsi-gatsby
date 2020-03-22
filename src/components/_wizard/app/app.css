@@ -1,0 +1,98 @@
+/*Global CSS rules*/
+html {
+  box-sizing: border-box;
+}
+
+body {
+  color: #242424;
+  margin: 0;
+  padding: 0;
+}
+
+.mrsi-wizard-site {
+  font-size: 16px;
+}
+
+/*
+  Set defaults for all links.
+  Create class specific styles to override as necessary.
+*/
+
+a {
+  outline: none;
+  text-decoration: none;
+  color: #566573;
+}
+
+a:link {
+  text-decoration: none;
+  color: #566573;
+}
+
+a:visited {
+  text-decoration: none;
+  color: #566573;
+}
+
+a:focus {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  color: black;
+}
+
+a.footerNav {
+  outline: none;
+  text-decoration: none;
+  font-size: 0.8em;
+}
+
+a.footerNav:link {
+  color: rgb(46, 46, 46);
+}
+
+a.footerNav:visited {
+  color: rgb(46, 46, 46);
+}
+
+a.footerNav:focus {
+  text-decoration: underline;
+}
+
+a.footerNav:hover {
+  text-decoration: underline;
+}
+
+a.footerNav:active {
+  color: black;
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  .svg-inline--fa {
+    display: none;
+  }
+
+  #rfp_preview, #rfp_preview * {
+    visibility: visible;
+  }
+
+  #rfp_preview {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  #rfp_preview h1 {
+    page-break-before: always;
+  }
+}
+

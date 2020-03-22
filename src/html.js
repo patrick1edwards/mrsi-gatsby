@@ -18,6 +18,10 @@ export default function HTML(props) {
           src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=DOD&subagency=USACE"
           id="_fed_an_ua_tag"
         ></script>
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        ></link>
       </head>
       <body {...props.bodyAttributes}>
         {props.preBodyComponents}
