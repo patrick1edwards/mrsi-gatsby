@@ -1,66 +1,55 @@
 {
-  "name": "gatsby-starter-default",
-  "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "name": "mrsi-web-wizards",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "private": true,
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.25",
-    "@fortawesome/free-regular-svg-icons": "^5.11.2",
-    "@fortawesome/free-solid-svg-icons": "^5.11.2",
-    "@fortawesome/react-fontawesome": "^0.1.5",
-    "gatsby": "^2.18.21",
-    "gatsby-image": "^2.2.23",
-    "gatsby-plugin-manifest": "^2.2.20",
-    "gatsby-plugin-netlify-cms": "^4.1.40",
-    "gatsby-plugin-offline": "^2.2.10",
-    "gatsby-plugin-react-helmet": "^3.1.10",
-    "gatsby-plugin-sharp": "^2.2.27",
-    "gatsby-remark-copy-linked-files": "^2.1.23",
-    "gatsby-remark-images": "^3.1.25",
-    "gatsby-source-filesystem": "^2.1.28",
-    "gatsby-transformer-json": "^2.2.11",
-    "gatsby-transformer-remark": "^2.6.26",
-    "gatsby-transformer-sharp": "^2.2.19",
-    "google-map-react": "^1.1.5",
-    "lodash": "^4.17.15",
-    "moment": "^2.24.0",
-    "netlify-cms-app": "^2.11.21",
-    "pngquant-bin": "^5.0.2",
-    "prop-types": "^15.7.2",
-    "react": "^16.12.0",
-    "react-bootstrap": "^1.0.0-beta.12",
-    "react-dom": "^16.12.0",
-    "react-helmet": "^5.2.1",
-    "react-moment": "^0.9.2",
-    "react-responsive-carousel": "^3.1.50",
-    "react-youtube": "^7.9.0",
-    "uswds": "^2.2.1"
+    "@material-ui/core": "^4.0.0",
+    "@material-ui/icons": "^4.0.0",
+    "axios": "^0.19.0",
+    "classnames": "^2.2.6",
+    "cookie-parser": "^1.4.4",
+    "debug": "^4.1.1",
+    "express": "^4.17.0",
+    "immutable": "^4.0.0-rc.12",
+    "lodash-es": "^4.17.11",
+    "markdown-it": "^9.0.1",
+    "markdown-it-anchor": "^5.0.2",
+    "markdown-it-attrs": "^3.0.1",
+    "markdown-it-center-text": "^1.0.4",
+    "markdown-it-toc-done-right": "^4.0.0",
+    "material-table": "^1.36.0",
+    "morgan": "^1.9.1",
+    "node-sass": "^4.12.0",
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0",
+    "react-html-parser": "^2.0.2",
+    "react-jsonschema-form": "^1.5.0",
+    "react-modal": "^3.8.1",
+    "react-router-dom": "^5.0.0",
+    "react-scripts": "3.1.0",
+    "react-transition-group": "^4.0.0"
+  },
+  "scripts": {
+    "start": "concurrently \"react-scripts start\" \"nodemon server/server.js\"",
+    "start-frontend": "react-scripts start",
+    "build": "react-scripts build",
+    "eject": "react-scripts eject",
+    "federalist": "react-scripts build"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
   },
   "devDependencies": {
-    "aws-sdk": "^2.539.0",
-    "env-cmd": "^10.0.1",
-    "eslint-plugin-flowtype": "^2.50.3",
-    "prettier": "^1.18.2"
+    "concurrently": "^4.1.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "nodemon": "^1.19.0",
+    "prettier": "^1.17.0"
   },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
-  "scripts": {
-    "build": "gatsby build",
-    "develop": "env-cmd -f .env.development gatsby develop",
-    "format": "prettier --write src/**/*.{js,jsx}",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
-    "federalist": "gatsby build --prefix-paths"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
-  }
+  "proxy": "http://localhost:3001",
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }

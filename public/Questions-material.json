@@ -1,0 +1,317 @@
+{
+  "questions": [
+    {
+      "key": "PROJECT_TITLE",
+      "question": "What is the name of the project?",
+      "response": { 
+        "inputType": "TextField",
+        "subtype": "text",
+        "maxlength": 100,
+        "pattern": "[A-Za-z0-9 _.,!\"'\/$]*"
+      },
+      "group": "Project_Information", 
+      "keywords": "project",
+      "version": 1
+    },
+    {
+      "key": "PROJECT_LOCATION",
+      "question": "Where is the project located?",
+      "response": { 
+        "inputType": "TextField",
+        "subtype": "text",
+        "maxlength": 100,
+        "pattern": "[A-Za-z0-9 _.,!\"'\/$]*"
+      },
+      "group": "Project_Information", 
+      "keywords": "project",
+      "version": 1
+    },
+    {
+      "key": "CONSTRUCTION_TYPE",
+      "question": "Describe what is to be constructed for each task order.",
+      "response": { 
+        "inputType": "TextField",
+        "subtype": "text",
+        "multiline": true,
+        "rows": 4,
+        "rowsMax": 10,
+        "maxlength": 1000,
+        "pattern": "[A-Za-z0-9 _.,!\"'\/$]*"
+      },
+      "group": "Project_Information", 
+      "keywords": "project",
+      "version": 1
+    },
+    {
+      "key": "CONSTRUCTION_VALUE",
+      "question": "What is the minimum construction value (in dollars)?",
+      "response": { 
+        "inputType": "TextField",
+        "subtype": "number",
+        "min": 0,
+        "step": 1000,
+        "startAdornment": "$"
+      },
+      "group": "Project_Information", 
+      "keywords": "project",
+      "version": 1
+    },
+    {
+      "key": "CONTRACT_NUMBER",
+      "question": "What is the contract number?",
+      "response": { 
+        "inputType": "TextField",
+        "subtype": "text",
+        "maxlength": 100,
+        "pattern": "[A-Za-z0-9 _.,!\"'\/$]*"
+      },
+      "group": "Project_Information", 
+      "keywords": "project",
+      "version": 1
+    },
+    {
+      "key": "SITEWORK_DESCRIPTION",
+      "question": "Describe the site work for the Design-Build contractor.",
+      "response": { 
+        "inputType": "TextField",
+        "subtype": "text",
+        "multiline": true,
+        "rows": 4,
+        "rowsMax": 10,
+        "maxlength": 1000,
+        "pattern": "[A-Za-z0-9 _.,!\"'\/$]*"
+      },
+      "group": "project", 
+      "keywords": "Project_Information",
+      "version": 1
+    },
+    {
+      "key": "SPECIALIZED_YES_NO",
+      "question": "Are there specialized requirements?",
+      "response": {
+        "inputType": "TextField",
+        "subtype": "oneOf"
+      }
+    },
+    {
+      "key": "SPECIALIZED_REQUIREMENTS",
+      "question": "Describe any specialized requirements (up to 3).",
+      "response": { 
+        "inputType": "TextField",
+        "subtype": "text",
+        "multiline": true,
+        "rows": 4,
+        "rowsMax": 10,
+        "maxlength": 1000,
+        "pattern": "[A-Za-z0-9 _.,!\"'\/$]*"
+      },
+      "group": "Project_Information", 
+      "keywords": "project",
+      "version": 1
+    },
+    {
+      "key": "TASKORDER_DESCRIPTION",
+      "question": "Provide the task order description.",
+      "response": { 
+        "inputType": "TextField",
+        "subtype": "text",
+        "multiline": true,
+        "rows": 4,
+        "rowsMax": 10,
+        "maxlength": 1000,
+        "pattern": "[A-Za-z0-9 _.,!\"'\/$]*"
+      },
+      "group": "Project_Information", 
+      "keywords": "project",
+      "version": 1
+    },
+    {
+      "key": "TOTAL_IDIQ_AWARDS",
+      "question": "How many base IDIQ awards will be made under this solicitation?",
+      "response": { 
+        "inputType": "TextField",
+        "subtype": "number",
+        "min": 0,
+        "max": 20
+      },
+      "group": "Project_Information", 
+      "keywords": "project",
+      "version": 1
+    },
+    {
+      "key": "TYP_PROJECT_SIZE",
+      "question": "What is the typical project size?",
+      "response": { 
+        "inputType": "TextField",
+        "subtype": "number",
+        "min": 0,
+        "step": 1000,
+        "endAdornment": "SF"
+      },
+      "group": "Project_Information", 
+      "keywords": "project",
+      "version": 1
+    },
+    {
+      "key": "SHORT_LIST",
+      "question": "What is the maximum number of Phase 1 offers that can move on to Phase 2?",
+      "response": { 
+        "inputType": "TextField",
+        "subtype": "number",
+        "min": 0,
+        "max": 20
+      },
+      "group": "Proposal_Submittal",
+      "keywords": "submittal",
+      "version": 1
+    },
+    {
+      "key": "SHORT_ANNOUNCED",
+      "question": "Will the short list firms be publically announced?",
+      "response": {
+        "inputType": "TextField",
+        "subtype": "select",
+        "options": [
+          {
+            "label" : "Yes",
+            "value" : false
+          },
+          { 
+            "label" : "No",
+            "value" : true
+          }
+        ]
+      },
+      "group": "",
+      "keywords": "",
+      "version": 1
+    },
+    {
+      "key": "PM_PHONE",
+      "question": "At which number can I reach the Project Member?",
+      "response": { 
+        "inputType": "TextField",
+        "subtype": "telephone"
+      },
+      "group": "POC",
+      "keywords": "contact poc project_manager",
+      "version": 1
+    },
+    {
+      "key": "BACON",
+      "question": "Will there be bacon?",
+      "response": {
+        "inputType": "TextField",
+        "subtype": "select",
+        "options": [
+          {
+            "label" : "Yes",
+            "value" : false
+          },
+          { 
+            "label" : "No",
+            "value" : true
+          }
+        ]
+      },
+      "group": "",
+      "keywords": "",
+      "version": 1
+    },
+    {
+      "key": "TURKEY",
+      "question": "Will there be turkey?",
+      "response": {
+        "inputType": "TextField",
+        "subtype": "select",
+        "options": [
+          {
+            "label" : "Yes",
+            "value" : false
+          },
+          { 
+            "label" : "No",
+            "value" : true
+          }
+        ]
+      },
+      "group": "",
+      "keywords": "",
+      "version": 1
+    },
+    {
+      "key": "4-HAM",
+      "question": "Will there be ham?",
+      "response": {
+        "inputType": "TextField",
+        "subtype": "select",
+        "options": [
+          {
+            "label" : "Yes",
+            "value" : false
+          },
+          { 
+            "label" : "No",
+            "value" : true
+          }
+        ]
+      },
+      "group": "",
+      "keywords": "",
+      "version": 1
+    },
+    {
+      "key": "ISSUING_DISTRICT",
+      "question": "What is the name of the District?",
+      "response": { 
+        "inputType": "TextField",
+        "subtype": "text",
+        "maxlength": 100,
+        "pattern": "[A-Za-z0-9 _.,!\"'\/$]*"
+      },
+      "group": "Project_Information", 
+      "keywords": "project",
+      "version": 1
+    },
+    {
+      "key": "ISSUING_DIST_MAIL",
+      "question": "What is the email address of the District?",
+      "response": { 
+        "inputType": "TextField",
+        "subtype": "text",
+        "maxlength": 100,
+        "pattern": "[A-Za-z0-9 _.,!\"'\/$]*"
+      },
+      "group": "Project_Information", 
+      "keywords": "project",
+      "version": 1
+    },
+    {
+      "key": "COST_HIGH",
+      "question": "What is the maximum contract amount (in dollars)?",
+      "response": { 
+        "inputType": "TextField",
+        "subtype": "number",
+        "min": 0,
+        "step": 1000,
+        "startAdornment": "$"
+      },
+      "group": "Project_Information", 
+      "keywords": "project",
+      "version": 1
+    },
+    {
+      "key": "CONTRACT_NUMBER",
+      "question": "What is the contract number?",
+      "response": { 
+        "inputType": "TextField",
+        "subtype": "text",
+        "maxlength": 100,
+        "pattern": "[A-Za-z0-9 _.,!\"'\/$]*"
+      },
+      "group": "Project_Information", 
+      "keywords": "project",
+      "version": 1
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+/* Now we add our customizations */
+/* .form-group {
+  margin-top: 15px;
+} */
+
+.ReactModal__Content--after-open {
+  font-family: 'Roboto', 'Segoe UI', 'Oxygen', 'Ubuntu', 'Cantarell',
+    'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: auto;
+  font-size: 1.1rem;
+  padding: 0;
+  max-width: 80%;
+}
+
+.ReactModal__Body--open {
+  overflow: hidden; /* keep document from scrolling under the dialog */
+}
+
+.rjsf {
+  min-width: 400px;
+}
+
+.json-form-actions {
+  margin: 1.5em 0 0 0;
+  text-align: right;
+}
+
+.json-form-actions > button {
+  padding: 4px 12px;
+  margin-left: 1em;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+/*
+  Set a minimum for all form-control elements to keep our dialog
+  reasonably sized. Controls (i.e. textarea) can override as necessary.
+*/
+.form-control {
+  min-width: 400px;
+}
+
+textarea.form-control {
+  min-width: 600px;
+}
+
+/* fieldset {
+  margin: 0 0.5rem;
+  padding: 0 0.5rem;
+} */
+
+.help-block {
+  margin: 0.5em 1em;
+  font-size: 90%;
+}

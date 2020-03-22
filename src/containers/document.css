@@ -1,0 +1,291 @@
+body {
+  font-family: 'Roboto', 'Segoe UI', 'Oxygen', 'Ubuntu', 'Cantarell',
+    'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+.document {
+  margin: 20px;
+  font-size: 5rem;
+}
+
+div.mdOptions {
+  background-color: white;
+}
+
+.replacerPreview {
+  background-color: white;
+}
+
+.replacerEditMode {
+  background-color: lightgoldenrodyellow;
+}
+
+span[data-replacer],
+span[data-remover] {
+  cursor: pointer;
+}
+
+/* the varitext code */
+.userAnswered {
+  color: black;
+}
+
+/* the varitext prompt icon */
+.userAnsweredPrompt {
+  color: green;
+  cursor: pointer;
+}
+
+.userNotAnsweredPrompt {
+  color: red;
+  cursor: pointer;
+}
+
+.removerPreview.userNotAnswered,
+.replacerPreview.userNotAnswered {
+  text-shadow: 2px 2px 8px #ff0000;
+}
+
+.notUserEnabledPrompt {
+  font-size: 80%;
+}
+
+.removerPreview {
+  background-color: white;
+}
+
+.removerEditMode {
+  background-color: lightgoldenrodyellow;
+}
+
+.removerEditMode0,
+.removerEditMode1,
+.removerEditMode2,
+.removerEditMode3,
+.removerEditMode4,
+.removerEditMode5 {
+  border: 1px lightgray dashed;
+  padding: 1px 6px;
+}
+
+.removedEditMode0:hover,
+.removerEditMode0:hover {
+  background-color: #a6acaf;
+}
+
+.removedEditMode1:hover,
+.removerEditMode1:hover {
+  background-color: #bdc3c7;
+}
+
+.removedEditMode2:hover,
+.removerEditMode2:hover {
+  background-color: #cacfd2;
+}
+
+.removedEditMode3:hover,
+.removerEditMode3:hover {
+  background-color: #d7dbdd;
+}
+
+.removedEditMode4:hover,
+.removerEditMode4:hover {
+  background-color: #e5e7e9;
+}
+
+.removedEditMode5:hover,
+.removerEditMode5:hover {
+  background-color: #f2f3f4;
+}
+
+.removedPreview,
+.removedEditMode,
+.removedEditMode0,
+.removedEditMode1,
+.removedEditMode2,
+.removedEditMode3,
+.removedEditMode4,
+.removedEditMode5 {
+  text-decoration: line-through;
+  text-decoration-color: red;
+  background-color: whitesmoke;
+}
+
+.red {
+  color: red;
+}
+
+a.tocLink {
+  outline: none !important;
+  text-decoration: underline !important;
+  color: #00f !important;
+}
+
+a.tocLink:link {
+  outline: none !important;
+  text-decoration: underline !important;
+  color: #00f !important;
+}
+
+a.tocLink:visited {
+  outline: none !important;
+  text-decoration: underline !important;
+  color: #00f !important;
+}
+
+.table-of-contents ul {
+  list-style-type: none;
+  margin-left: 2em;
+  padding-left: 0;
+}
+
+.table-of-contents ul ul {
+  margin-left: 2em;
+  padding-left: 0;
+}
+
+.table-of-contents ul ul ul {
+  margin-left: 2em;
+  padding-left: 0;
+}
+
+.table-of-contents ul ul ul ul {
+  margin-left: 2em;
+  padding-left: 0;
+}
+
+/*  Selects top level headings in our preview document where
+    the preview element is the parent of the header element.
+*/
+#rfp_preview > h1 {
+  display: block;
+  font-size: 1.5em;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: 900;
+  text-align: center;
+  page-break-before: always;
+}
+
+#rfp_preview > h2 {
+  display: block;
+  font-size: 1.25em;
+  margin-top: 0.83em;
+  margin-bottom: 0.83em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: 800;
+  text-align: left;
+}
+
+#rfp_preview > h3 {
+  display: block;
+  font-size: 1.17em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: 700;
+  text-align: left;
+}
+
+#rfp_preview > h4 {
+  display: block;
+  font-size: 1em;
+  margin-top: 1.33em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: 600;
+  text-align: left;
+}
+
+#rfp_preview > h5 {
+  display: block;
+  font-size: 0.83em;
+  margin-top: 1.67em;
+  margin-bottom: 1.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: 500;
+  text-align: left;
+}
+
+#rfp_preview > h5 {
+  display: block;
+  font-size: 0.67em;
+  margin-top: 2.33em;
+  margin-bottom: 2.33em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: 500;
+  text-align: left;
+}
+
+/* #rfp_preview > h2, h3, h4, h5, h6 {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  padding-top: 0.5em !important;
+  padding-bottom: 0.5em !important;
+} */
+
+/*  Ensure we have top margin if a paragraph is adjacent peer of a remover.
+    Most often occurs with a nested remover that has text after it.
+    i[] is previous element when in preview
+    div[] when not in preview.
+*/
+div[data-remover] + p,
+i[data-remover] + p {
+  margin-top: 1em;
+}
+
+/* Selects paragraph preceded by an h2 */
+h2 ~ p {
+  margin-top: 12pt;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+/*
+  Center text parser plugin spits out <br> if adjacent to (on next line in markdown)
+  another center text. This squashes those br so we don't get extra spacing between them.
+*/
+.text-align-center + br {
+  display: none;
+}
+
+/*
+  Similar to squashing <br>, if adjacent center text lines have blank line between them,
+  then it adds extra blank <p> tags that need squashed.
+*/
+p:empty {
+  display: none;
+}
+
+/* unvisited link */
+a:link {
+  color: black;
+  text-decoration: underline;
+}
+
+/* visited link */
+a:visited {
+  color: black;
+  text-decoration: underline;
+}
+
+/* mouse over link */
+a:hover {
+  color: blue;
+  text-decoration: underline;
+}
+
+/* selected link */
+a:active {
+  color: blue;
+  text-decoration: none;
+}

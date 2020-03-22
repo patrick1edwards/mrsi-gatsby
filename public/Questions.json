@@ -1,0 +1,210 @@
+{
+  "ACF_PROJECT": {
+    "schema": {
+      "title": "Project Information",
+      "type": "object",
+      "properties": {
+        "PROJECT_NAME": {
+          "title": "How will you refer to this project?",
+          "type": "string"
+        },
+        "PROJECT_LOCATION_LATLONG": {
+          "title": "What is the Latitude and Longitude of the project?",
+          "type": "string"
+        }
+      }
+    },
+    "uiSchema": {
+      "PROJECT_NAME": {
+        "ui:autofocus": true,
+        "ui:placeholder": "Enter the Project's name"
+      },
+      "PROJECT_LOCATION_LATLONG": {
+        "ui:placeholder": "Enter the Project's latitude and longitude"
+      },
+      "CONFERENCE_SITE": {
+        "ui:placeholder": "Enter the Project's site description"
+      }
+    },
+    "formData": {
+      "PROJECT_NAME": "",
+      "CONFERENCE_SITE": "",
+      "PROJECT_LOCATION_LATLONG": ""
+    }
+  },
+  "ACF_BUILDING_CODES": {
+    "schema": {
+      "title": "Building Codes",
+      "type": "object",
+      "properties": {
+        "BUILDING_CODES_REFERENCE": {
+          "title": "Where will the contractor find the building code references?",
+          "type": "string"
+        }
+      }
+    },
+    "uiSchema": {
+      "BUILDING_CODES_REFERENCE": {
+        "ui:placeholder": "Enter the building code reference details"
+      }
+    },
+    "formData": {
+      "BUILDING_CODES_REFERENCE": ""
+    }
+  },
+  "ACF_CONTRACT": {
+    "schema": {
+      "title": "Contract Information",
+      "type": "object",
+      "properties": {
+        "CONTRACT_TYPE": {
+          "title": "Which contract type will be used?",
+          "type": "string",
+          "enum": ["Design-Build", "Services"],
+          "default": ""
+        }
+      }
+    },
+    "uiSchema": {},
+    "formData": {
+      "CONTRACT_TYPE": "Design-Build"
+    }
+  },
+  "ACF_ADMIN": {
+    "schema": {
+      "title": "Contract Information",
+      "type": "object",
+      "properties": {
+        "RESPONSIBLE_PARTY": {
+          "title": "Who is responsible for this site?",
+          "type": "string",
+          "enum": [
+            "Contracting Officer Representative (COR)",
+            "Owner",
+            "Facility Staff"
+          ],
+          "default": ""
+        },
+        "STATE": {
+          "title": "Which state's insurance coverage is required?",
+          "type": "string"
+        },
+        "CONFERENCE_SITE": {
+          "title": "Where will the post-award conference take place?",
+          "type": "string"
+        }
+      }
+    },
+    "uiSchema": {
+      "STATE": {
+        "ui:placeholder": "Enter the applicable state"
+      },
+      "CONFERENCE_SITE": {
+        "ui:placeholder": "Enter the post-award conference site details"
+      }
+    },
+    "formData": {
+      "CONTRACT_TYPE": "Owner",
+      "STATE": "",
+      "CONFERENCE_SITE": ""
+    }
+  },
+  "ACF_PAYMENT": {
+    "schema": {
+      "title": "Proposal Schedule",
+      "type": "object",
+      "properties": {
+        "PROPOSAL_SCHEDULE_TYPE": {
+          "title": "Which proposal schedule type will be used?",
+          "type": "string",
+          "enum": ["Bidding", "Pricing"],
+          "default": ""
+        }
+      }
+    },
+    "uiSchema": {},
+    "formData": {
+      "PROPOSAL_SCHEDULE_TYPE": "Design-Build"
+    }
+  },
+  "ACF_DESIGN_DOCUMENTS": {
+    "schema": {
+      "title": "Design Documents",
+      "type": "object",
+      "properties": {
+        "DESIGN_DOCUMENTS": {
+          "title": "Are there additional design requirements?",
+          "type": "string"
+        }
+      }
+    },
+    "uiSchema": {
+      "DESIGN_DOCUMENTS": {
+        "ui:placeholder": "Enter additional design requirements here or leave blank and insert manually after saving",
+        "ui:widget": "textarea",
+        "ui:options": {
+          "rows": 10
+        }
+      }
+    },
+    "formData": {
+      "DESIGN_DOCUMENTS": ""
+    }
+  },
+  "ACF_ADDITIONAL_REQUIREMENTS": {
+    "schema": {
+      "title": "Additional Requirements",
+      "type": "object",
+      "properties": {
+        "ADDITIONAL_REQUIREMENTS": {
+          "title": "Are there additional requirements?",
+          "type": "string"
+        }
+      }
+    },
+    "uiSchema": {
+      "ADDITIONAL_REQUIREMENTS": {
+        "ui:placeholder": "Enter additional requirements",
+        "ui:widget": "textarea",
+        "ui:options": {
+          "rows": 10
+        }
+      }
+    },
+    "formData": {
+      "ADDITIONAL_REQUIREMENTS": ""
+    }
+  },
+  "ACF_OCCUPANCY": {
+    "schema": {
+      "title": "Continued Occupancy Requirements",
+      "type": "object",
+      "properties": {
+        "CONTINUED_OCCUPANCY_DEFAULT": {
+          "title": "Use the default continued occupancy text?",
+          "type": "boolean",
+          "default": true
+        },
+        "CONTINUED_OCCUPANCY_CUSTOM": {
+          "title": "What is the continued occupancy requirement?",
+          "type": "string"
+        }
+      }
+    },
+    "uiSchema": {
+      "ui:order": ["CONTINUED_OCCUPANCY_DEFAULT", "CONTINUED_OCCUPANCY_CUSTOM"],
+      "CONTINUED_OCCUPANCY_CUSTOM": {
+        "condition": "CONTINUED_OCCUPANCY_DEFAULT=false",
+        "ui:placeholder": "Enter custom occupancy requirements",
+        "ui:widget": "textarea",
+        "ui:options": {
+          "rows": 15
+        }
+      }
+    },
+    "formData": {
+      "CONTINUED_OCCUPANCY_DEFAULT": "",
+      "CONTINUED_OCCUPANCY_CUSTOM": "There is no continued occupancy requirement."
+    }
+  }
+}
